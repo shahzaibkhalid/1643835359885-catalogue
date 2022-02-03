@@ -1,6 +1,6 @@
 import { routes } from './routes'
 
-const SERVER_URL = 'http://localhost:8081/';
+const SERVER_URL = 'http://localhost:8081';
 
 const getDeviceImgByType = (type) => {
   switch (type) {
@@ -13,4 +13,4 @@ const getDeviceImgByType = (type) => {
   }
 }
 
-export { getDeviceImgByType }
+export { getDeviceImgByType, SERVER_URL }
