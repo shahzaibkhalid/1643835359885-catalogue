@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   rootDir: './src',
-  setupFiles: [
-    path.resolve('jest/setupEnzyme.js')
+  setupFilesAfterEnv: [
+    '<rootDir>/../jest/setup.jest.js'
   ]
 }
