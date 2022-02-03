@@ -7,6 +7,7 @@ module.exports = {
   entry: './src/client.jsx',
   devServer: {
     contentBase: './dist',
+    port: 3000
   },
   plugins: [
     new CleanWebpackPlugin(),
