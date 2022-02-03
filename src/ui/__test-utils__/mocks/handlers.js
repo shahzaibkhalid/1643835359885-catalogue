@@ -23,7 +23,7 @@ const handlers = [
   // GET /watches with no data
   rest.get(SERVER_URL + routes.WATCHES, (_, res, ctx) => res(
     ctx.json({
-      data: null,
+      data: [],
     })
   ))
 ];
