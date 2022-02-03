@@ -1,6 +1,13 @@
 import React from 'react';
-import Heading from '@tds/core-heading';
+import DeviceList from '../../containers/DeviceList';
+import { routes } from '../../routes';
+import PageLevelHeading from '../../components/PageLevelHeading';
 
-const Watches = () => <Heading level="h1">Watches</Heading>;
+const Watches = () => (
+  <>
+    <PageLevelHeading level="h1">Watches</PageLevelHeading>
+    <DeviceList type={routes.WATCHES} />
+  </>
+);
 
 export default Watches;

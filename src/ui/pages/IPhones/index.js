@@ -1,6 +1,13 @@
 import React from 'react';
-import Heading from '@tds/core-heading';
+import DeviceList from '../../containers/DeviceList';
+import { routes } from '../../routes';
+import PageLevelHeading from '../../components/PageLevelHeading';
 
-const IPhones = () => <Heading level="h1">IPhones</Heading>;
+const IPhones = () => (
+  <>
+    <PageLevelHeading level="h1">iPhones</PageLevelHeading>
+    <DeviceList type={routes.IPHONES} />
+  </>
+);
 
 export default IPhones;
