@@ -1,8 +1,10 @@
 import React, { StrictMode } from 'react';
-import Router from '../Router'
+import CSSReset from '@tds/core-css-reset';
+import Router from '../Router';
 
 const App = () => (
   <StrictMode>
+    <CSSReset />
     <Router />
   </StrictMode>
 );
