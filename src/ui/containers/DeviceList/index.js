@@ -9,20 +9,22 @@ const DeviceList = ({
 }) => {
   const [devices, setDevices] = useState([]);
   useEffect(() => {
+    const abortController = new AbortController();
     const fetchDeviceData = async () => {
       try {
-        setDevices(await getDevicesByType(type));
+        setDevices(await getDevicesByType(type, abortController));
       } catch(err) {
         throw new Error(err);
       }
     }
     fetchDeviceData();
+    return () => abortController.abort();
   }, []);
   return (
     <>
       <FlexGrid>
-        <FlexGrid.Row>
-          {devices.map(device => (
+        <FlexGrid.Row data-testid='device-card-list'>
+          {devices?.map(device => (
             <FlexGrid.Col
               xs={12}
               sm={6}
