@@ -7,15 +7,15 @@ import PriceLockup from '@tds/core-price-lockup';
 import Box from '@tds/core-box';
 
 const DeviceCard = ({
-  imageSrc,
+  imgSrc,
   name,
   brand,
   price
 }) => (
-  <Card>
+  <Card fullHeight>
     <Box between={4}>
       <Image
-        src={imageSrc}
+        src={imgSrc}
         alt={name}
         width={160}
         height={202}
@@ -34,10 +34,13 @@ const DeviceCard = ({
 );
 
 DeviceCard.propTypes = {
-  imageSrc: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired
+  price: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object
+  ]).isRequired
 };
 
 export default DeviceCard;
